@@ -40,7 +40,7 @@ Outputs: `outputs/metrics.json`, `outputs/validation_flags.csv`, `outputs/exceed
 Author: Mohammad Rabbani – Sustainability Data Analyst & Research Consultant
 
 ## Links
-- Kaggle notebook: https://www.kaggle.com/rabbani0123 (runnable copy of `notebook.ipynb`)
+- Kaggle notebook (runs end-to-end on Kaggle): https://www.kaggle.com/code/rabbani0123/river-water-quality-data-validation
 - Cite: see `CITATION.cff`
 - Author: Mohammad Rabbani | Sustainability Data Analyst & Research Assistant
 
