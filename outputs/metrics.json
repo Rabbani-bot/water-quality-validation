@@ -1,0 +1,37 @@
+{
+  "records": 1761,
+  "true_errors": 293,
+  "error_rate_before_pct": 16.64,
+  "flagged": 283,
+  "precision_pct": 93.3,
+  "recall_pct": 90.1,
+  "residual_error_rate_pct": 1.96,
+  "false_positives": 19,
+  "missed_errors": 29,
+  "flags_by_rule": {
+    "missing": 32,
+    "unknown_station": 38,
+    "date_out_of_window": 30,
+    "physical_range": 68,
+    "bod_gt_cod": 53,
+    "duplicate": 34,
+    "statistical_outlier": 144
+  },
+  "recall_by_error_type_pct": {
+    "bod_gt_cod": 100.0,
+    "decimal_shift": 100.0,
+    "future_date": 100.0,
+    "impossible_value": 100.0,
+    "missing_value": 100.0,
+    "station_typo": 100.0,
+    "subtle_transcription": 6.5,
+    "unit_ug_for_mg": 100.0,
+    "duplicate": 100.0
+  },
+  "worst_station": {
+    "station": "RS-07",
+    "river_km": 14.0,
+    "BOD_exceed_pct": 100.0,
+    "BOD_median_excess_pct": 81.1
+  }
+}

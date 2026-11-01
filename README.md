@@ -1,11 +1,13 @@
 # River Water-Quality Data Validation and Hotspot Screening
 
-> **Simulation-based case study.** A clean "truth" dataset is generated (11 stations over a 20 km river stretch, weekly samples 2022–2024), then known data-entry errors are injected and logged. Because every error is known, the validator's performance is **measured**, not claimed.
+[![tests](https://github.com/Rabbani-bot/water-quality-validation/actions/workflows/tests.yml/badge.svg)](https://github.com/Rabbani-bot/water-quality-validation/actions/workflows/tests.yml) ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue) ![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
+> **Validation design.** A clean ground-truth dataset is generated (11 stations over a 20 km river stretch, weekly samples 2022–2024), then known data-entry errors are injected and logged. Because every error is known, the validator's performance is **measured**, not claimed.
 
 ![dashboard](outputs/dashboard.png)
 
 ## Pipeline
-1. **Generate truth:** pH, DO, BOD, COD, TSS and temperature, with two hypothetical industrial outfalls (km 8 and km 14), seasonal temperature effects and 2% genuine storm events (real extreme values, not errors).
+1. **Generate truth:** pH, DO, BOD, COD, TSS and temperature, with two modelled industrial outfalls (km 8 and km 14), seasonal temperature effects and 2% genuine storm events (real extreme values, not errors).
 2. **Inject errors (≈15% of records + 2% duplicates):** µg/L entered as mg/L, decimal shifts, impossible values, station-code typos, missing values, future dates, BOD > COD, and subtle ±30% transcription errors.
 3. **Validate (7 rules):** missing values, unknown station, date window, physical range, BOD ≤ COD consistency, exact duplicates, robust z-score (median/MAD, log scale for concentrations) per station.
 4. **Evaluate** flags against the injected-error log.
@@ -39,6 +41,7 @@ Author: Mohammad Rabbani – Sustainability Data Analyst & Research Consultant
 
 ## Links
 - Kaggle notebook: https://www.kaggle.com/rabbani0123 (runnable copy of `notebook.ipynb`)
+- Cite: see `CITATION.cff`
 - Author: Mohammad Rabbani | Sustainability Data Analyst & Research Assistant
 
 ## License
